@@ -7,10 +7,11 @@ This node will have an initialise script which will do the following when called
  
  * Uses environmental variable for location of certificate authority (ca)
  * Create certificate and send it off for signing accompanied by ca defined auto-sign network password (also environmental variable)
- * Clone the git repository documents the static ips and ports of supernodes on the network along with the privliged nodes
-   * uses environmental variable for the location of this git -- makes it so the image can be initialised with a one liner
- * Creates the freelan config file based on the git repo
+ * Clone the git repositories which document the static ips and ports of supernodes on the network along with the privliged nodes
+   * uses environmental variable for the locations of these repos -- makes it so the image can be initialised with a one liner
+ * Creates the freelan config file based on the available supernodes
  * creates ssh keys, sets up ssh server
+ * Exchanges keys with currently available privilged nodes
 
 User will then save this initialised docker image locally -- a second one liner for user to call docker with
 
